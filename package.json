@@ -23,7 +23,8 @@
     "build:cjs": "tsc --module commonjs --outDir lib/cjs",
     "prepublishOnly": "npm run build",
     "clean": "rimraf lib",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test": "npm run build:cjs && node test/uuid.test.js"
   },
   "dependencies": {
     "@types/uuid": "^8.0.0",
